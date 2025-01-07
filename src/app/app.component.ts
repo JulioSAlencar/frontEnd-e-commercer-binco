@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './header/header.component'; // Importar o HeaderComponent
-import { FooterComponent } from './footer/footer.component'; // Importar o FooterComponent
+import { HeaderComponent } from './shared/header/header.component'; // Importar o HeaderComponent
+import { FooterComponent } from './shared/footer/footer.component'; // Importar o FooterComponent
 import { RouterOutlet } from '@angular/router'; // Importar o RouterOutlet para usar no template
 
 @Component({
