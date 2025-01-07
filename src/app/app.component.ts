@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component'; // Importar o HeaderComponent
+import { FooterComponent } from './footer/footer.component'; // Importar o FooterComponent
+import { RouterOutlet } from '@angular/router'; // Importar o RouterOutlet para usar no template
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,  // Marcando como um componente standalone
+  imports: [HeaderComponent, FooterComponent, RouterOutlet] // Incluir os componentes aqui
 })
 export class AppComponent {
-  title = 'frontEnd-e-commercer-binco';
+  // Qualquer lógica necessária
 }
