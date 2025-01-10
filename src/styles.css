@@ -2,27 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Define a altura mínima do body e html para ocupar 100% da altura da tela */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Ajusta o conteúdo da página para ocupar toda a altura disponível */
-  .app-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-  }
-  
-  /* O conteúdo principal vai ocupar o espaço restante */
-  .main-content {
-    flex: 1;
-  }
-  
-  /* Agora, o footer vai ficar fixo na parte inferior da tela */
-  app-footer {
-    margin-top: auto;  /* Faz o footer ir para o final */
-  }
-  
+
