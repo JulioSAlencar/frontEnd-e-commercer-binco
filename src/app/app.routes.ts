@@ -4,7 +4,7 @@ import { UserProfileComponent } from './pages/user-profile/user-profile.componen
 import { Error404Component } from './error/error-404/error-404.component';
 import { PreferencesComponent } from './pages/preferences/preferences.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { LoginComponent } from './login/login/login.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   { path: 'register', component: RegisterComponent },
