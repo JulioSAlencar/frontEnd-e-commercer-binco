@@ -5,11 +5,17 @@ import { Error404Component } from './error/error-404/error-404.component';
 import { PreferencesComponent } from './pages/preferences/preferences.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './login/login.component';
+import { MasculineComponent } from './category/masculine/masculine.component';
+import { FeminineComponent } from './category/feminine/feminine.component';
+import { ChildishComponent } from './category/childish/childish.component';
 
 export const routes: Routes = [
+  { path: 'masculino', component: MasculineComponent },
+  { path: 'feminina', component: FeminineComponent },
+  { path: 'infantil', component: ChildishComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: '404', component: Error404Component },
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: '**', redirectTo: '404' }, // Redireciona para a página inicial para rotas inválidas
+  { path: '**', redirectTo: '404' },
 ];
