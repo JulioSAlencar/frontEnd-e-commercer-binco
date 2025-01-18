@@ -1,10 +1,22 @@
 <header class="bg-yellow-500 text-white p-4">
-    <div class="container mx-auto">
-      <h1 class="text-2xl">Binco</h1>
-      <nav>
-        <a class="text-white px-4" routerLink="/">Link1</a>
-        <a class="text-white px-4" routerLink="/about">Link2</a>
-      </nav>
+  <nav class="flex items-center justify-between px-14">
+
+    <a href="./" class="block">
+      <img class="w-12" src="./assets/icons/bincoHeader.svg" alt="" />
+    </a>
+
+    <div class="flex gap-16 text-xl text-black">
+      <a class="hover:underline hover:text-gray-700" href="./">Masculino</a>
+      <a class="hover:underline hover:text-gray-700" href="./">Feminino</a>
+      <a class="hover:underline hover:text-gray-700" href="">Infantil</a>
+      <a class="hover:underline hover:text-gray-700" href="">Calçado</a>
+      <a class="hover:underline hover:text-gray-700" href="./">Acessórios</a>
     </div>
-  </header>
-  
+
+    <div class="flex gap-6">
+      <i class="fa-solid fa-cart-shopping text-black text-3xl transition-transform duration-300 ease-in-out transform hover:scale-110 hover:text-gray-700"></i>
+      <i class="fa-solid fa-user text-black text-3xl transition-transform duration-300 ease-in-out transform hover:scale-110 hover:text-gray-700"></i>
+    </div>
+
+  </nav>
+</header>
