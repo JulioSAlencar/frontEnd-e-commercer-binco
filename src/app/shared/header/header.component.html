@@ -1,22 +1,105 @@
-<header class="bg-yellow-500 text-white p-4">
+<header class="bg-yellow-500 text-white p-4 relative">
   <nav class="flex items-center justify-between px-14">
-
-    <a href="./" class="block">
+    <a [routerLink]="['./']" class="block">
       <img class="w-12" src="./assets/icons/bincoHeader.svg" alt="" />
     </a>
 
     <div class="flex gap-16 text-xl text-black">
-      <a class="hover:underline hover:text-gray-700" href="./">Masculino</a>
-      <a class="hover:underline hover:text-gray-700" href="./">Feminino</a>
-      <a class="hover:underline hover:text-gray-700" href="">Infantil</a>
-      <a class="hover:underline hover:text-gray-700" href="">Calçado</a>
-      <a class="hover:underline hover:text-gray-700" href="./">Acessórios</a>
+      <a
+        class="hover:underline hover:text-gray-700"
+        [routerLink]="['/category']"
+        [queryParams]="{ category: 'masculino' }"
+        >Masculino</a
+      >
+      <a
+        class="hover:underline hover:text-gray-700"
+        [routerLink]="['/category']"
+        [queryParams]="{ category: 'feminino' }"
+        >Feminino</a
+      >
+      <a
+        class="hover:underline hover:text-gray-700"
+        href="javascript:void(0)"
+        (click)="toggleDiv(1)"
+        >Infantil</a
+      >
+      <div
+        [style.display]="isDiv1Visible ? 'grid' : 'none'"
+        class="absolute top-11 left-[55.625rem] p-2 rounded-md bg-gradient-to-b from-transparent to-white text-center"
+      >
+        <a
+          class="hover:underline hover:text-gray-700"
+          [routerLink]="['/category']"
+          [queryParams]="{ category: 'infantil', subcategory: 'masculino' }"
+          >menino</a
+        >
+
+        <a
+          class="hover:underline hover:text-gray-700"
+          [routerLink]="['/category']"
+          [queryParams]="{ category: 'infantil', subcategory: 'feminino' }"
+          >menina</a
+        >
+      </div>
+      <a
+        class="hover:underline hover:text-gray-700"
+        href="javascript:void(0)"
+        (click)="toggleDiv(2)"
+        >Calçados</a
+      >
+      <div
+        [style.display]="isDiv2Visible ? 'grid' : 'none'"
+        class="absolute top-11 right-[49rem] grid p-2 rounded-md bg-gradient-to-b from-transparent to-white text-center"
+      >
+        <a
+          class="hover:underline hover:text-gray-700"
+          [routerLink]="['/category']"
+          [queryParams]="{ category: 'calcados', subcategory: 'masculino' }"
+          >masculino</a
+        >
+
+        <a
+          class="hover:underline hover:text-gray-700"
+          [routerLink]="['/category']"
+          [queryParams]="{ category: 'calcados', subcategory: 'feminino' }"
+          >feminino</a
+        >
+
+        <a
+          class="hover:underline hover:text-gray-700 text-wrap"
+          [routerLink]="['/category']"
+          [queryParams]="{
+            category: 'calcados',
+            subcategory: 'infantil masculino'
+          }"
+          >menino</a
+        >
+
+        <a
+          class="hover:underline hover:text-gray-700"
+          [routerLink]="['/category']"
+          [queryParams]="{
+            category: 'calcados',
+            subcategory: 'infantil feminino'
+          }"
+          >menina</a
+        >
+      </div>
+      <a
+        class="hover:underline hover:text-gray-700"
+        [routerLink]="['/category']"
+        [queryParams]="{ category: 'acessorios' }"
+        >Acessórios</a
+      >
     </div>
 
     <div class="flex gap-6">
-      <i class="fa-solid fa-cart-shopping text-black text-3xl transition-transform duration-300 ease-in-out transform hover:scale-110 hover:text-gray-700"></i>
-      <i class="fa-solid fa-user text-black text-3xl transition-transform duration-300 ease-in-out transform hover:scale-110 hover:text-gray-700"></i>
+      <i
+        class="fa-solid fa-cart-shopping text-black text-3xl transition-transform duration-300 ease-in-out transform hover:scale-110 hover:text-gray-700"
+      ></i>
+      <i
+        class="fa-solid fa-user text-black text-3xl transition-transform duration-300 ease-in-out transform hover:scale-110 hover:text-gray-700"
+      ></i>
     </div>
-
   </nav>
 </header>

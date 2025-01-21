@@ -10,8 +10,11 @@ import { FeminineComponent } from './category/feminine/feminine.component';
 import { ChildishComponent } from './category/childish/childish.component';
 import { FootwearComponent } from './category/footwear/footwear.component';
 import { AccessoryComponent } from './category/accessory/accessory.component';
+import { CategoryComponent } from './pages/category/category.component';
 
 export const routes: Routes = [
+  // { path: 'category', redirectTo: 'category/masculino' },
+  { path: 'category', component: CategoryComponent },
   { path: 'masculino', component: MasculineComponent },
   { path: 'feminina', component: FeminineComponent },
   { path: 'infantil', component: ChildishComponent },
