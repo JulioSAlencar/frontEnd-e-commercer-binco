@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-category',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.css'],
 })
